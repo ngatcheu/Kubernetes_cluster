@@ -5,7 +5,7 @@
    $ ./containerd.sh
 
 # Installer kubeadm et ses acolytes: kubelet et kubectl
-   $ ./kubeadm
+   $ ./kubeadmkubeadm token create --print-join-command
 
 ----------------------------------MASTER-----------------------------------
 # Créer le cluster Kubernetes
@@ -25,6 +25,7 @@
    
    
    print a join command
+   
    $ kubeadm token create --print-join-command
 
 --------------------------------NODES----------------------------------------
