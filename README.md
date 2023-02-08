@@ -22,6 +22,10 @@
    $ curl https://raw.githubusercontent.com/projectcalico/calico/v3.24.5/manifests/custom-resources.yaml -O
 
    $ kubectl create -f custom-resources.yaml
+   
+   
+   print a join command
+   $ kubeadm token create --print-join-command
 
 --------------------------------NODES----------------------------------------
 
