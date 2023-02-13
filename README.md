@@ -10,6 +10,12 @@
 ----------------------------------MASTER-----------------------------------
 # Créer le cluster Kubernetes
    $ sudo kubeadm init --pod-network-cidr=192.168.0.0/16
+   
+ error execution phase preflight: [preflight] Some fatal errors occurred:
+Solution 
+ 
+kubeadm join controleplane:6443 --token 3wyyqs.jvrawep5i6v0mjuf --discovery-token-ca-cert-hash\ sha256:93855ff5299d4a3b3b073e1a576a54590e7c951a10ed87038d3d4c4d9ed60b21  --kubernetes-version=v1.24.0 --ignore-preflight-errors=all  --cri-socket /run/containerd/containerd.sock
+
 
 # Ici vous devez être connecté avec votre compte utilisateur et non pas en tant que `root`
    $ mkdir -p $HOME/.kube
@@ -27,6 +33,7 @@
    print a join command
    
    $ kubeadm token create --print-join-command
+   
 
 --------------------------------NODES----------------------------------------
 
